@@ -3,4 +3,7 @@
     <string name="landing_text">Can you recognise these doggos?</string>
     <string name="landing_cta">Take the quiz</string>
     <string name="high_score">HIGH SCORE: %s</string>
+    <string name="streak">streak: %s</string>
+    <string name="show_correct_answer_dialog_text">Oh no! The correct answer is\n%s</string>
+    <string name="show_correct_answer_dialog_cta">See my score</string>
 </resources>

@@ -4,6 +4,7 @@ import androidx.compose.runtime.Composable
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.rememberNavController
 import com.tijiebo.woofwoof.landing.landing
+import com.tijiebo.woofwoof.questionnaire.questionnaire
 import kotlinx.serialization.Serializable
 
 @Composable
@@ -12,7 +13,12 @@ fun ComposeApp() {
     NavHost(navController = navController, startDestination = ComposeRoute.Landing) {
         landing(
             onStartQuestionnaire = {
-                // TODO: Navigate to questionnaire
+                navController.navigate(ComposeRoute.Questionnaire)
+            }
+        )
+        questionnaire(
+            navigateToScore = {
+                // TODO: Navigate to score
             }
         )
     }
@@ -21,4 +27,7 @@ fun ComposeApp() {
 sealed interface ComposeRoute {
     @Serializable
     data object Landing : ComposeRoute
+
+    @Serializable
+    data object Questionnaire : ComposeRoute
 }
