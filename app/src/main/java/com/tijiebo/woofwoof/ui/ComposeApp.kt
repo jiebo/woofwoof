@@ -5,6 +5,7 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.rememberNavController
 import com.tijiebo.woofwoof.landing.landing
 import com.tijiebo.woofwoof.questionnaire.questionnaire
+import com.tijiebo.woofwoof.score.score
 import kotlinx.serialization.Serializable
 
 @Composable
@@ -17,8 +18,17 @@ fun ComposeApp() {
             }
         )
         questionnaire(
-            navigateToScore = {
-                // TODO: Navigate to score
+            navigateToScore = { streak ->
+                navController.navigate(ComposeRoute.Score(streak)) {
+                    popUpTo<ComposeRoute.Landing> {
+                        inclusive = false
+                    }
+                }
+            }
+        )
+        score(
+            navigateToLanding = {
+                navController.popBackStack(ComposeRoute.Landing, false)
             }
         )
     }
@@ -30,4 +40,7 @@ sealed interface ComposeRoute {
 
     @Serializable
     data object Questionnaire : ComposeRoute
+
+    @Serializable
+    data class Score(val streak: Int) : ComposeRoute
 }
