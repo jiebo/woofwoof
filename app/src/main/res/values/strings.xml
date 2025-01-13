@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">Woofwoof</string>
+    <string name="landing_text">Can you recognise these doggos?</string>
+    <string name="landing_cta">Take the quiz</string>
+    <string name="high_score">HIGH SCORE: %s</string>
+    <string name="streak">streak: %s</string>
+    <string name="show_correct_answer_dialog_text">Oh no! The correct answer is\n%s</string>
+    <string name="show_correct_answer_dialog_cta">See my score</string>
+    <string name="score_new_high_score">Wow! You broke the high score</string>
+    <string name="score_new_high_score_cta">Extend my lead</string>
+    <string name="score_no_new_high_score">That was a valiant effort!</string>
+    <string name="score_no_new_high_score_cta">Try again</string>
+    <string name="new_high_score">NEW HIGH SCORE: %s</string>
+    <string name="your_score">YOUR SCORE: %s</string>
 </resources>
